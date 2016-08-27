@@ -1,0 +1,81 @@
+
+@media screen and (min-width:62em){
+    //base font or rootfont size is set to 16px;
+  //1rem = 16px; , 1em = 16px;
+  //62em x 16px = 992px;
+  //61rem x 16px = 976px;
+  .container{
+    width: 60rem;
+  }
+
+  %notebook{
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+
+ .col-notebook{
+  max-width: 100%;
+  flex-basis:0;
+  flex-grow:1;
+  @extend %notebook;
+}
+
+@for $i from 1 through 12 {
+  .col-notebook-#{$i} {
+     @extend %notebook;
+   }
+}
+
+@for $i from 1 through 11 {
+  .col-notebook-offset-#{$i} {
+     @extend %notebook;
+   }
+}
+
+@for $i from 1 through 12 {
+  .col-notebook-#{$i} {
+    $col-width: 8.33333333%;
+    flex-basis: #{$col-width * $i};
+    max-width: #{$col-width * $i};
+   }
+}
+
+@for $i from 1 through 11 {
+  .col-notebook-offset-#{$i} {
+    $col-width: 8.33333333%;
+    margin-left: #{$col-width * $i};
+   }
+}
+
+@each $justify,$justify-content,$text-align in   (start,flex-start,start),(center,center,center),(end,flex-end,end){
+  .#{$justify}-notebook{
+    justify-content:#{$justify-content};
+    text-align: #{$text-align};
+  }
+}
+
+
+@each $align-items,$value in (top,flex-start),(middle,center),(bottom,flex-end){
+  .#{$align-items}-notebook{
+     align-items: #{$value};
+  }
+}
+
+@each $justify in around, between{
+  .#{$justify}-notebook{
+    justify-content: space-#{$justify};
+   }
+}
+
+.first-notebook{
+  order: -1;
+}
+
+.last-notebook{
+  order:1;
+}
+
+}//for notebooks and screens greater than 1200px  and less than 1200px  notebook classes

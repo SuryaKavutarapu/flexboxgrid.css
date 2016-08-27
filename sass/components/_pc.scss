@@ -1,0 +1,83 @@
+
+
+
+@media screen and (min-width:75em){
+    //base font or rootfont size is set to 16px;
+  //1rem = 16px; , 1em = 16px;
+  //75em x 16px = 1200px;
+  //71rem x 16px = 1136px;
+  .container{
+    width: 71rem;
+  }
+
+  %pc{
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+
+ .col-pc{
+  max-width: 100%;
+  flex-basis:0;
+  flex-grow:1;
+  @extend %pc;
+}
+
+@for $i from 1 through 12 {
+  .col-pc-#{$i} {
+     @extend %pc;
+   }
+}
+
+@for $i from 1 through 11 {
+  .col-pc-offset-#{$i} {
+     @extend %pc;
+   }
+}
+
+@for $i from 1 through 12 {
+  .col-pc-#{$i} {
+    $col-width: 8.33333333%;
+    flex-basis: #{$col-width * $i};
+    max-width: #{$col-width * $i};
+   }
+}
+
+@for $i from 1 through 11 {
+  .col-pc-offset-#{$i} {
+    $col-width: 8.33333333%;
+    margin-left: #{$col-width * $i};
+   }
+}
+
+@each $justify,$justify-content,$text-align in   (start,flex-start,start),(center,center,center),(end,flex-end,end){
+  .#{$justify}-pc{
+    justify-content:#{$justify-content};
+    text-align: #{$text-align};
+  }
+}
+
+
+@each $align-items,$value in (top,flex-start),(middle,center),(bottom,flex-end){
+  .#{$align-items}-pc{
+     align-items: #{$value};
+  }
+}
+
+@each $justify in around, between{
+  .#{$justify}-pc{
+    justify-content: space-#{$justify};
+   }
+}
+
+.first-pc{
+  order: -1;
+}
+
+.last-pc{
+  order:1;
+}
+
+}//for notebooks and screens greater than 1200px  and  above pc classes

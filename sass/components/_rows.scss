@@ -1,0 +1,15 @@
+.row{
+    display:flex;
+    flex-wrap:wrap;
+    flex:0 1 auto;
+    margin-right: -1rem;
+    margin-left: -1rem;
+}
+
+.row-reverse{
+   flex-direction:row-reverse;
+  }
+
+.col-reverse{
+   flex-direction:column-reverse;
+  }

@@ -1,0 +1,82 @@
+
+@media screen and (min-width: 48em){
+  //base font or rootfont size is set to 16px;
+  //1rem = 16px; , 1em = 16px;
+  //48em x 16px = 768px;
+  //46rem x 16px = 736px;
+  .container{
+    width: 46rem;
+  }
+
+  %tablet{
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+
+ .col-tablet{
+  max-width: 100%;
+  flex-basis:0;
+  flex-grow:1;
+  @extend %tablet;
+}
+
+@for $i from 1 through 12 {
+  .col-tablet-#{$i} {
+     @extend %tablet;
+   }
+}
+
+@for $i from 1 through 11 {
+  .col-tablet-offset-#{$i} {
+     @extend %tablet;
+   }
+}
+
+@for $i from 1 through 12 {
+  .col-tablet-#{$i} {
+    $col-width: 8.33333333%;
+    flex-basis: #{$col-width * $i};
+    max-width: #{$col-width * $i};
+   }
+}
+
+@for $i from 1 through 11 {
+  .col-tablet-offset-#{$i} {
+    $col-width: 8.33333333%;
+    margin-left: #{$col-width * $i};
+   }
+}
+
+@each $justify,$justify-content,$text-align in   (start,flex-start,start),(center,center,center),(end,flex-end,end){
+  .#{$justify}-tablet{
+    justify-content:#{$justify-content};
+    text-align: #{$text-align};
+  }
+}
+
+
+@each $align-items,$value in (top,flex-start),(middle,center),(bottom,flex-end){
+  .#{$align-items}-tablet{
+     align-items: #{$value};
+  }
+}
+
+@each $justify in around, between{
+  .#{$justify}-tablet{
+    justify-content: space-#{$justify};
+   }
+}
+
+.first-tablet{
+  order: -1;
+}
+
+.last-tablet{
+  order:1;
+}
+
+
+}//for tablets and screens greater than 768px  and less than 992px  tablet classes

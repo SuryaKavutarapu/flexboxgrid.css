@@ -1,0 +1,15 @@
+/*
+ Author: suryakavutarapu
+ url:  www.suryakavutarapu.com
+*/
+
+html {
+  font-size: 16px;
+  /* all the units used in the grid system is of REM's and EM's and base font is set to 16px the value of the breakpoints may change when you change base font-size value */
+}
+
+@import "components/rows";
+@import "components/mobile";
+@import "components/tablet";
+@import "components/notebook";
+@import "components/pc";

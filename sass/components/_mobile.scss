@@ -1,0 +1,79 @@
+
+.container{
+  margin-right:auto;
+  margin-left:auto;
+  padding-right:2rem;
+  padding-left:2rem;
+}
+
+
+
+%mobile{
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+
+.col-mobile{
+  max-width: 100%;
+  flex-basis:0;
+  flex-grow:1;
+  @extend %mobile;
+}
+
+@for $i from 1 through 12 {
+  .col-mobile-#{$i} {
+    @extend %mobile;
+   }
+}
+
+@for $i from 1 through 11 {
+  .col-mobile-offset-#{$i} {
+     @extend %mobile;
+   }
+}
+
+@for $i from 1 through 12 {
+  .col-mobile-#{$i} {
+    $col-width: 8.33333333%;
+    flex-basis: #{$col-width * $i};
+    max-width: #{$col-width * $i};
+   }
+}
+
+@for $i from 1 through 11 {
+  .col-mobile-offset-#{$i} {
+    $col-width: 8.33333333%;
+    margin-left: #{$col-width * $i};
+   }
+}
+
+@each $justify,$justify-content,$text-align in   (start,flex-start,start),(center,center,center),(end,flex-end,end){
+  .#{$justify}-mobile{
+    justify-content:#{$justify-content};
+    text-align: #{$text-align};
+  }
+}
+
+
+@each $align-items,$value in (top,flex-start),(middle,center),(bottom,flex-end){
+  .#{$align-items}-mobile{
+     align-items: #{$value};
+  }
+}
+
+@each $justify in around, between{
+  .#{$justify}-mobile{
+    justify-content: space-#{$justify};
+   }
+}
+
+.first-mobile{
+  order: -1;
+}
+
+.last-mobile{
+  order:1;
+}
