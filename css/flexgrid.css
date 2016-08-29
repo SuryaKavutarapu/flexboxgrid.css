@@ -29,7 +29,8 @@ html {
   box-sizing: border-box;
   flex: 0 0 auto;
   padding-right: 1rem;
-  padding-left: 1rem; }
+  padding-left: 1rem;
+  position: relative; }
 
 .col-mobile {
   max-width: 100%;
@@ -155,9 +156,11 @@ html {
     width: 46rem; }
 
   .col-tablet, .col-tablet-1, .col-tablet-2, .col-tablet-3, .col-tablet-4, .col-tablet-5, .col-tablet-6, .col-tablet-7, .col-tablet-8, .col-tablet-9, .col-tablet-10, .col-tablet-11, .col-tablet-12, .col-tablet-offset-1, .col-tablet-offset-2, .col-tablet-offset-3, .col-tablet-offset-4, .col-tablet-offset-5, .col-tablet-offset-6, .col-tablet-offset-7, .col-tablet-offset-8, .col-tablet-offset-9, .col-tablet-offset-10, .col-tablet-offset-11 {
+    box-sizing: border-box;
     flex: 0 0 auto;
     padding-right: 1rem;
-    padding-left: 1rem; }
+    padding-left: 1rem;
+    position: relative; }
 
   .col-tablet {
     max-width: 100%;
@@ -285,7 +288,8 @@ html {
     box-sizing: border-box;
     flex: 0 0 auto;
     padding-right: 1rem;
-    padding-left: 1rem; }
+    padding-left: 1rem;
+    position: relative; }
 
   .col-notebook {
     max-width: 100%;
@@ -413,7 +417,8 @@ html {
     box-sizing: border-box;
     flex: 0 0 auto;
     padding-right: 1rem;
-    padding-left: 1rem; }
+    padding-left: 1rem;
+    position: relative; }
 
   .col-pc {
     max-width: 100%;
