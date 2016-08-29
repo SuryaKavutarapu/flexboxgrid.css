@@ -7,6 +7,7 @@ html {
   /* all the units used in the grid system is of REM's and EM's and base font is set to 16px the value of the breakpoints may change when you change base font-size value */ }
 
 .row {
+  box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;
   flex: 0 1 auto;
@@ -29,8 +30,7 @@ html {
   box-sizing: border-box;
   flex: 0 0 auto;
   padding-right: 1rem;
-  padding-left: 1rem;
-  position: relative; }
+  padding-left: 1rem; }
 
 .col-mobile {
   max-width: 100%;
@@ -159,8 +159,7 @@ html {
     box-sizing: border-box;
     flex: 0 0 auto;
     padding-right: 1rem;
-    padding-left: 1rem;
-    position: relative; }
+    padding-left: 1rem; }
 
   .col-tablet {
     max-width: 100%;
@@ -288,8 +287,7 @@ html {
     box-sizing: border-box;
     flex: 0 0 auto;
     padding-right: 1rem;
-    padding-left: 1rem;
-    position: relative; }
+    padding-left: 1rem; }
 
   .col-notebook {
     max-width: 100%;
@@ -417,8 +415,7 @@ html {
     box-sizing: border-box;
     flex: 0 0 auto;
     padding-right: 1rem;
-    padding-left: 1rem;
-    position: relative; }
+    padding-left: 1rem; }
 
   .col-pc {
     max-width: 100%;
