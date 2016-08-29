@@ -7,7 +7,6 @@ html {
   /* all the units used in the grid system is of REM's and EM's and base font is set to 16px the value of the breakpoints may change when you change base font-size value */ }
 
 .row {
-  box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;
   flex: 0 1 auto;
@@ -27,6 +26,7 @@ html {
   padding-left: 2rem; }
 
 .col-mobile, .col-mobile-1, .col-mobile-2, .col-mobile-3, .col-mobile-4, .col-mobile-5, .col-mobile-6, .col-mobile-7, .col-mobile-8, .col-mobile-9, .col-mobile-10, .col-mobile-11, .col-mobile-12, .col-mobile-offset-1, .col-mobile-offset-2, .col-mobile-offset-3, .col-mobile-offset-4, .col-mobile-offset-5, .col-mobile-offset-6, .col-mobile-offset-7, .col-mobile-offset-8, .col-mobile-offset-9, .col-mobile-offset-10, .col-mobile-offset-11 {
+  box-sizing: border-box;
   flex: 0 0 auto;
   padding-right: 1rem;
   padding-left: 1rem; }
@@ -155,7 +155,6 @@ html {
     width: 46rem; }
 
   .col-tablet, .col-tablet-1, .col-tablet-2, .col-tablet-3, .col-tablet-4, .col-tablet-5, .col-tablet-6, .col-tablet-7, .col-tablet-8, .col-tablet-9, .col-tablet-10, .col-tablet-11, .col-tablet-12, .col-tablet-offset-1, .col-tablet-offset-2, .col-tablet-offset-3, .col-tablet-offset-4, .col-tablet-offset-5, .col-tablet-offset-6, .col-tablet-offset-7, .col-tablet-offset-8, .col-tablet-offset-9, .col-tablet-offset-10, .col-tablet-offset-11 {
-    box-sizing: border-box;
     flex: 0 0 auto;
     padding-right: 1rem;
     padding-left: 1rem; }
