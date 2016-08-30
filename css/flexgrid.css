@@ -23,8 +23,8 @@ html {
 .container {
   margin-right: auto;
   margin-left: auto;
-  padding-right: 2rem;
-  padding-left: 2rem; }
+  padding-right: 1rem;
+  padding-left: 1rem; }
 
 .col-mobile, .col-mobile-1, .col-mobile-2, .col-mobile-3, .col-mobile-4, .col-mobile-5, .col-mobile-6, .col-mobile-7, .col-mobile-8, .col-mobile-9, .col-mobile-10, .col-mobile-11, .col-mobile-12, .col-mobile-offset-1, .col-mobile-offset-2, .col-mobile-offset-3, .col-mobile-offset-4, .col-mobile-offset-5, .col-mobile-offset-6, .col-mobile-offset-7, .col-mobile-offset-8, .col-mobile-offset-9, .col-mobile-offset-10, .col-mobile-offset-11 {
   box-sizing: border-box;
